@@ -18,7 +18,11 @@ ActiveRecord::Schema.define(version: 20140709193552) do
     t.string   "rating"
     t.decimal  "total_gross"
     t.datetime "created_at"
+<<<<<<< HEAD
     t.datetime "updated_at"
+=======
+    t.date     "updated_at"
+>>>>>>> 1347c699efceddb3c743c5316a6f07280208eb25
     t.text     "description"
     t.date     "released_on"
     t.string   "cast"
