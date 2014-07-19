@@ -1,6 +1,6 @@
 == README
 
-Website Demo: hejianfei.com
+Website Demo: http://hejianfei.com
 
 
 
