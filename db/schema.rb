@@ -11,18 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140709193552) do
+ActiveRecord::Schema.define(version: 20140716033016) do
 
   create_table "movies", force: true do |t|
     t.string   "title"
     t.string   "rating"
     t.decimal  "total_gross"
     t.datetime "created_at"
-<<<<<<< HEAD
     t.datetime "updated_at"
-=======
-    t.date     "updated_at"
->>>>>>> 1347c699efceddb3c743c5316a6f07280208eb25
     t.text     "description"
     t.date     "released_on"
     t.string   "cast"
@@ -30,5 +26,16 @@ ActiveRecord::Schema.define(version: 20140709193552) do
     t.string   "duration"
     t.string   "image_file_name"
   end
+
+  create_table "reviews", force: true do |t|
+    t.string   "name"
+    t.integer  "stars"
+    t.text     "comment"
+    t.integer  "movie_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "reviews", ["movie_id"], name: "index_reviews_on_movie_id"
 
 end
